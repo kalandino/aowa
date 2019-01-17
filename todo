@@ -1,0 +1,41 @@
+Урок 1.
+
+Цель задания — научиться декомпозировать архитектуру на составные части и продумывать взаимодействие частей системы.
+1. Выберите любой проект, который вы писали сами либо реализовывали в рамках проектного задания GeekBrains. Приложите GitHub-ссылку на него или запакуйте в архив. С ним мы будем работать до конца курса.
+2. Для выбранного проекта опишите архитектуру системы — выделите компоненты (контроллеры и модели) и нарисуйте (в произвольной форме) схему взаимодействия всех компонентов.
+3. * В заданиях со звёздочкой с четвёртой лекции будет разрабатываться микрофреймворк. Пока достаточно начать его обдумывать.
+
+Ссылка на архитектуру системы:
+https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=MVC#R3Vnfd%2BIoFP5rfLQHEhPjo7F2e3bbPZ11Zzrz1MMYGjOL4hL8NX%2F9gJCEhMTW1bievrRwucDN%2Fe79uGDHHc23vzG0nD3SCJOOA6Jtx73tOA50ep74JyU7JfE8XwlilkRaqRBMkp9YC4GWrpIIpyVFTinhybIsnNLFAk95SYYYo5uy2isl5V2XKMaWYDJFxJY%2BJxGfKWng9Av5PU7iWbYz9AdqZI4yZf0l6QxFdGOI3HHHHTFKuWrNtyNMpPMyv6h5dw2juWEML%2Fi7Jnz68fTv4I%2BfbLp%2B%2FAY%2Bp%2BOX6FNXG5vyXfbBOBLfr7uU8RmN6QKRcSENGV0tIixXBaI343MimlA0hSFs91XKb7ys%2B02P%2FcCc7zS8aMWpEBWrP1C61HrKHmlE42dqUUpXbKq1wj%2Bf78nD%2Fe7L6K%2Fn8HHyMpz%2BHnVdHS6IxVhPjQfr4BXQh4fQ%2F8d313Duvsy6MAdDRDGmcyzMFvMYJogn67IdSIdTnOsVHhcN7fQjAMji%2FMwIQNP%2FCo4rRsC5EAKHjFwjstI7jajwHCUEs47jE2F4%2BF22Yp57x0BLpPVSNoV%2FkJhCaMzQXCguMUuEgWKNythTMRBuZgnHkyXae3EjGLQMZ5QwwWkJXchRnMr9UwUgyE2pwWWNGcdbQ2S7Vo%2B6GTntKv1NwXXQ17KZwXMBaCsfoOXhFhgJtJ4PzUxzRflQj0D%2FnAi818t4m%2FCvRlvxlu94um9kjRH850PlBG%2FrqU80ETvnqdUblFMrr2iyJZRdepZ5blcW8vuVHIWD8kIqnKyFhoyhnaG2lApps8HVfTKDi1hSKxaRlTvrXcF2KCMM8tUl5Ju8W0QcfJtIEZtOWiXOnCQvQZz1nOG0Q5ynFhL%2FJSOd9%2FIkqKWBU3P52MyBlWDwnAtkjmNlzpcEb45KHPB24pwhVXrXVmJ4H7jCyJxrpk5z1XuBEuOglUbwfk5ltV3FhRBxz8cXCdMqo%2FeC%2F53Re5aXOiKuBuIv7AShbId7STje%2F%2B3VJL%2BU3xk64X7uaN%2FuG3K1DtiPqrZn6I8tZIRTeRkChsXVBH0n2SGrSVNoe2HHu5WHsEgBfX3Zn8kkieXFhuBXuZREKpkiMtRiLtMjTAXkySL%2Be58r3d55oLb42vVsqEEN1G5rUHv1UI8NQO72bZABlYM21JJ68PuGvrmCWhk2zv1QgPdgJbcdG%2FD%2BRfEObLw1BsIBCxPBgUpQhdStlbKhkaxqNNCSGkyVRFhc2qRhYx1YarORxSS35Y3zMBUuMyPMJChoRbBfZ73QuXvD1o8aqFVmgl4NM9UdQueI1PrXgPO%2BEOtbviiWfNe46XfBDYBO6QHzBgC%2FfPdwgyATVF8DjnllOM9LQr2z7OKrvReHo%2B%2F3lQcJOICV6DjtlnLIIwbPTTBbJ8KLrVxUrEyrwbEx%2BXxwbTeVmjq5fCRU6BRaxHugOMiPf3O10JhboeIr5tyTYK8WB3klYMAeXJJyHTtpmlEX7UFzCQB0ENTXhtBQ7pcPdRkcXaPAUHu7xoRhc5nxkaIjvxvkJzJs7a4gusXPwYqBix%2FV3fEv
+
+=========================================================================================================
+
+Урок 2
+
+Цель задания — научиться рисовать UML-диаграмму и диаграмму последовательности.
+1. Для выбранного на первом уроке проекта составить полную диаграмму классов. По возможности постарайтесь описать как можно больше частей системы.
+2. Выделить три основных, на ваш взгляд, процесса. Изобразите для этих процессов диаграммы последовательностей.
+
+=========================================================================================================
+
+Урок 3
+
+=========================================================================================================
+
+Урок 4
+
+=========================================================================================================
+
+Урок 5
+
+=========================================================================================================
+
+Урок 6
+
+=========================================================================================================
+
+Урок 7
+
+=========================================================================================================
+
+Урок 8
