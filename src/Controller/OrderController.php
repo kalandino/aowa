@@ -39,7 +39,7 @@ class OrderController
      * @return Response
      */
     public function checkoutAction(Request $request): Response
-    {
+    {   $productList = (new Basket($request->getSession()))->getProductsInfo();
         $isLogged = (new Security($request->getSession()))->isLogged();
         if (!$isLogged) {
             return $this->redirect('user_authentication');
@@ -47,6 +47,6 @@ class OrderController
 
         (new Basket($request->getSession()))->checkout();
 
-        return $this->render('order/checkout.html.php');
+        return $this->render('order/checkout.html.php', ['productList' => $productList, 'isLogged' => $isLogged]);
     }
 }
