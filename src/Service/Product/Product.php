@@ -30,10 +30,17 @@ class Product
     public function getAll(string $sortType): array
     {
         $productList = $this->getProductRepository()->fetchAll();
+        $collection = new ProductCollection();
 
         // Применить паттерн Стратегия
-        // $sortType === 'price'; // Сортировка по цене
-        // $sortType === 'name'; // Сортировка по имени
+        // Сортировка по цене
+        if ($sortType === 'price') {
+            $productList = $collection->sort(new PriceComparator​(), $productList);
+        }
+        // Сортировка по имени
+        if ($sortType === 'name') {
+            $productList = $collection->sort(new NameComparator(), $productList);
+        }
 
         return $productList;
     }
@@ -47,4 +54,5 @@ class Product
     {
         return new Model\Repository\Product();
     }
+
 }
