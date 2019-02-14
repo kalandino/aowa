@@ -9,18 +9,6 @@ use Model;
 class Product
 {
     /**
-     * Получаем информацию по конкретному продукту
-     *
-     * @param int $id
-     * @return Model\Entity\Product|null
-     */
-    public function getInfo(int $id): ?Model\Entity\Product
-    {
-        $product = $this->getProductRepository()->search([$id]);
-        return count($product) ? $product[0] : null;
-    }
-
-    /**
      * Получаем все продукты
      *
      * @param string $sortType
@@ -30,10 +18,17 @@ class Product
     public function getAll(string $sortType): array
     {
         $productList = $this->getProductRepository()->fetchAll();
+        $collection = new ProductCollection();
 
         // Применить паттерн Стратегия
-        // $sortType === 'price'; // Сортировка по цене
-        // $sortType === 'name'; // Сортировка по имени
+        // Сортировка по цене
+        if ($sortType === 'price') {
+            $productList = $collection->sort(new PriceComparator​(), $productList);
+        }
+        // Сортировка по имени
+        if ($sortType === 'name') {
+            $productList = $collection->sort(new NameComparator(), $productList);
+        }
 
         return $productList;
     }
@@ -47,4 +42,5 @@ class Product
     {
         return new Model\Repository\Product();
     }
+
 }
