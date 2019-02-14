@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Model\Repository;
 
-use Model;
+use Model\Entity;
 
 class Product
 {
@@ -23,8 +23,8 @@ class Product
         $productList = [];
         $product = new Entity\Product();
         foreach ($this->getDataFromSource(['id' => $ids]) as $item) {
-            $productList[] = clone $product;
-            $product->setId($item['id'])
+            $productList[] = clone $product
+                ->setId($item['id'])
                 ->setName($item['name'])
                 ->setPrice($item['price']);
         }
@@ -42,8 +42,8 @@ class Product
         $productList = [];
         $product = new Entity\Product();
         foreach ($this->getDataFromSource() as $item) {
-            $productList[] = clone $product;
-            $product->setId($item['id'])
+            $productList[] = clone $product
+                ->setId($item['id'])
                 ->setName($item['name'])
                 ->setPrice($item['price']);
         }
