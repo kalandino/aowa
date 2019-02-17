@@ -22,18 +22,6 @@ class Product
     private $price;
 
     /**
-     * @param int $id
-     * @param string $name
-     * @param float $price
-     */
-    public function __construct(int $id, string $name, float $price)
-    {
-        $this->id = $id;
-        $this->name = $name;
-        $this->price = $price;
-    }
-
-    /**
      * @return int
      */
     public function getId(): int
@@ -44,9 +32,10 @@ class Product
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(int $id)
     {
         $this->id = $id;
+        return $this;
     }
 
     /**
@@ -60,9 +49,10 @@ class Product
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(string $name)
     {
         $this->name = $name;
+        return $this;
     }
 
     /**
@@ -76,14 +66,10 @@ class Product
     /**
      * @param float $price
      */
-    public function setPrice(float $price): void
+    public function setPrice(float $price)
     {
         $this->price = $price;
-    }
-
-    public function __clone() 
-    { 
-        // Некоторая логика клонирования объекта 
+        return $this;
     }
 
     /**
