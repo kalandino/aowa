@@ -6,7 +6,7 @@ namespace Controller;
 
 use Framework\Render;
 use Service\Order\Basket;
-use Service\Product\ProductDecorator;
+use Service\Product\Product;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -29,7 +29,7 @@ class ProductController
             $basket->addProduct((int)$request->request->get('product'));
         }
 
-        $productInfo = (new ProductDecorator())->getInfo((int)$id);
+        $productInfo = (new Product())->getInfo((int)$id);
 
         if ($productInfo === null) {
             return $this->render('error404.html.php');
@@ -49,7 +49,7 @@ class ProductController
      */
     public function listAction(Request $request): Response
     {
-        $productList = (new ProductDecorator())->getAll($request->query->get('sort', ''));
+        $productList = (new Product())->getAll($request->query->get('sort', ''));
 
         return $this->render('product/list.html.php', ['productList' => $productList]);
     }

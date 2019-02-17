@@ -21,12 +21,8 @@ class Product
         }
 
         $productList = [];
-        $product = new Entity\Product();
         foreach ($this->getDataFromSource(['id' => $ids]) as $item) {
-            $productList[] = clone $product
-                ->setId($item['id'])
-                ->setName($item['name'])
-                ->setPrice($item['price']);
+            $productList[] = new Entity\Product($item['id'], $item['name'], $item['price']);
         }
 
         return $productList;
@@ -40,12 +36,8 @@ class Product
     public function fetchAll(): array
     {
         $productList = [];
-        $product = new Entity\Product();
         foreach ($this->getDataFromSource() as $item) {
-            $productList[] = clone $product
-                ->setId($item['id'])
-                ->setName($item['name'])
-                ->setPrice($item['price']);
+            $productList[] = new Entity\Product($item['id'], $item['name'], $item['price']);
         }
 
         return $productList;
