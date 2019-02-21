@@ -30,6 +30,10 @@ $routes->add(
     'order_checkout',
     new Route('/order/checkout', ['_controller' => [OrderController::class, 'checkoutAction']])
 );
+$routes->add(
+    'order_payment',
+    new Route('/order/payment', ['_controller' => [OrderController::class, 'paymentAction']])
+);
 
 $routes->add(
     'user_authentication',

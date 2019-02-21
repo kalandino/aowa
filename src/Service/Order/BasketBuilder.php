@@ -16,6 +16,7 @@ class BasketBuilder
      * @var Product[]
      */
     private $products;
+    
     /**
      * @var IBilling
      */
