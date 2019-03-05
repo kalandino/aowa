@@ -28,7 +28,7 @@ class Security implements ISecurity
     {
         $userId = $this->session->get(self::SESSION_USER_IDENTITY);
 
-        return $userId ? (new Model\Repository\User())->getById($userId) : null;
+        return $userId ? (new Model\Mappers\UserMapper())->getById($userId) : null;
     }
 
     /**
@@ -74,10 +74,10 @@ class Security implements ISecurity
     /**
      * Фабричный метод для репозитория User
      *
-     * @return Model\Repository\User
+     * @return Model\Mappers\UserMapper
      */
-    protected function getUserRepository(): Model\Repository\User
+    protected function getUserRepository(): Model\Mappers\UserMapper
     {
-        return new Model\Repository\User();
+        return new Model\Mappers\UserMapper();
     }
 }
