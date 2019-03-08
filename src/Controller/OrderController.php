@@ -6,6 +6,7 @@ namespace Controller;
 
 use Framework\Render;
 use Service\Order\Basket;
+use Service\Order\OnlinePaymentTransactionScript;
 use Service\User\Security;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -39,7 +40,8 @@ class OrderController
      * @return Response
      */
     public function checkoutAction(Request $request): Response
-    {   $productList = (new Basket($request->getSession()))->getProductsInfo();
+    {   
+        $productList = (new Basket($request->getSession()))->getProductsInfo();
         $isLogged = (new Security($request->getSession()))->isLogged();
         if (!$isLogged) {
             return $this->redirect('user_authentication');
@@ -48,5 +50,23 @@ class OrderController
         (new Basket($request->getSession()))->checkout();
 
         return $this->render('order/checkout.html.php', ['productList' => $productList, 'isLogged' => $isLogged]);
+    }
+
+    /**
+     * Оплата заказа
+     *
+     * @param Request $request
+     * @return Response
+     */
+    public function paymentAction(Request $request): Response
+    {   
+        $isLogged = (new Security($request->getSession()))->isLogged();
+        if (!$isLogged) {
+            return $this->redirect('user_authentication');
+        }
+
+        (new OnlinePaymentTransactionScript())->payment();
+
+        return $this->render('order/payment.html.php', ['isLogged' => $isLogged]);
     }
 }

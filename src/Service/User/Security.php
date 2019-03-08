@@ -28,7 +28,9 @@ class Security implements ISecurity
     {
         $userId = $this->session->get(self::SESSION_USER_IDENTITY);
 
-        return $userId ? (new Model\Repository\User())->getById($userId) : null;
+        $storageAdapter = new Model\Repository\IStorageAdapter();
+
+        return $userId ? (new Model\Repository\UserMapper($storageAdapter))->getById($userId) : null;
     }
 
     /**
@@ -76,8 +78,10 @@ class Security implements ISecurity
      *
      * @return Model\Repository\User
      */
-    protected function getUserRepository(): Model\Repository\User
+    protected function getUserRepository(): Model\Repository\UserMapper
     {
-        return new Model\Repository\User();
+        $storageAdapter = new Model\Repository\IStorageAdapter();
+
+        return new Model\Repository\UserMapper($storageAdapter);
     }
 }
