@@ -35,7 +35,5 @@ class UserMapper
 		return $this->storageAdapter->getDataFromSource($search = []);
 	}
 
-} 
-
-
+}
 

@@ -6,40 +6,8 @@ namespace Model\Repository;
 
 use Model\Entity;
 
-class User
+class IStorageAdapter
 {
-    /**
-     * Получаем пользователя по идентификатору
-     *
-     * @param int $id
-     * @return Entity\User|null
-     */
-    public function getById(int $id): ?Entity\User
-    {
-        foreach ($this->getDataFromSource(['id' => $id]) as $user) {
-            return $this->createUser($user);
-        }
-
-        return null;
-    }
-
-    /**
-     * Получаем пользователя по логину
-     *
-     * @param string $login
-     * @return Entity\User
-     */
-    public function getByLogin(string $login): ?Entity\User
-    {
-        foreach ($this->getDataFromSource(['login' => $login]) as $user) {
-            if ($user['login'] === $login) {
-                return $this->createUser($user);
-            }
-        }
-
-        return null;
-    }
-
     /**
      * Фабрика по созданию сущности пользователя
      *
